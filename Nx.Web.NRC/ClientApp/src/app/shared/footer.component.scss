@@ -1,0 +1,45 @@
+@import '../../__config.scss';
+footer{
+    padding:200px 0;
+}
+.footer {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__p {
+    font-size: 16px;
+    font-weight: $regular;
+    padding: 50px 0;
+  }
+
+  &__social {
+
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &__item {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 16px;
+    font-weight: $normal;
+    color:$titlecolor;
+   
+    padding: 50px 0;
+  }
+}

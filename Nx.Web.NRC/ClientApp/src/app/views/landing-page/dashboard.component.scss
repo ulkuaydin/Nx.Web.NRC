@@ -1,0 +1,47 @@
+@import '../../../__config.scss';
+
+
+.dashboard {
+    padding:200px 0;
+  &__body {
+    display: flex;
+    flex-direction: row;
+
+    &__image {
+      width: 100%;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+      }
+    }
+
+    &__info {
+      width: 50%;
+      height: 100%;
+      margin-left: -620px;
+      margin-top: 200px;
+
+      &__h2 {
+        font-size: 60px;
+        line-height: 1.3;
+        color: $titlecolor;
+        font-weight: $regular;
+
+        strong {
+          font-weight: $bold;
+          color: $titlecolor;
+          margin: 20px 0;
+          line-height: 1;
+        }
+      }
+      &__p{
+          font-size:1.375em;
+          font-weight:$regular;
+          color:$linkcolor;
+          line-height:1.6;
+      }
+    }
+  }
+}
