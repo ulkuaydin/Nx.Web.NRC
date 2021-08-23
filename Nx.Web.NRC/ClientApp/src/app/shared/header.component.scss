@@ -44,6 +44,9 @@ header {
         }
     }
 }
+.responsive-menu{
+    display:none;
+}
 .navbar-right {
   display: flex;
   align-items: center;
@@ -82,5 +85,57 @@ header {
       transition: all 0.2s ease-in-out;
       width: 10px;
     }
+  }
+}
+@media only screen and (max-width:575px){
+    .navbar-left{
+        grid-area:left;
+        justify-content:center;
+    }
+    .responsive-menu{
+        grid-area:menu;
+    }
+    .navbar-right{
+        grid-area:right;
+    }
+  .navbar {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+   grid-template-areas:'left left' 'menu right';
+   justify-content:normal;
+  }
+    .navbar-menu{
+        display:none;
+    }
+    .responsive-menu{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+    }
+    .navbar-right{
+        justify-content:center;
+    }
+  .mobile-menu {
+    position: fixed;
+    top: 120px;
+    left: 5%;
+    right: 5%;
+    bottom: 20%;
+    background-color: #000000;
+    z-index: 999;
+    width:100%;
+    height:auto;
+    &__list{
+        list-style:none;
+        display:flex;
+        flex-direction:column;
+        &__item{
+            padding:10px 0;
+            text-align:left;
+
+        }
+    }
+
   }
 }

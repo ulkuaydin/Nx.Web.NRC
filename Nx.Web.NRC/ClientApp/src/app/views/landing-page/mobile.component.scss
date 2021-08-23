@@ -102,3 +102,42 @@
         vertical-align:middle;
     }
 }
+@media only screen and (max-width:575px){
+    .mobile{
+        padding:20px 0;
+    }
+  .mobile-title {
+      margin:0;
+
+    &__h5 {
+      font-size: 12px;
+      margin: 0 0 0 0;
+      text-align: center;
+    }
+
+    &__h2 {
+      font-size: 1.3em;
+      text-align: center;
+    }
+  }
+  .mobile-parag {
+
+    &__p {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &__small {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+    .mobile-phone{
+        text-align:center;
+        padding:50px 0;
+        img{
+            max-width:50%;
+
+        }
+    }
+}
