@@ -10,6 +10,7 @@ import { MobileComponent } from './views/landing-page/mobile.component';
 import { InfoComponent } from './views/landing-page/info.component';
 import { DashboardComponent } from './views/landing-page/dashboard.component';
 import { FooterComponent } from './shared/footer.component';
+import { BuyComponent } from './views/landing-page/buy.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './shared/footer.component';
     MobileComponent,
     InfoComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    BuyComponent
   ],
   imports: [
     BrowserModule,
