@@ -14,16 +14,16 @@
 #topBtn {
   position: fixed;
   z-index: 1000;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   display: none;
   fill: #fff;
   stroke: inherit;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  bottom: -55px;
+  bottom: 60px;
   border:0;
-  left: 50%;
+  left: 90%;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
@@ -36,7 +36,7 @@
   outline: none;
 
 
-  &::after {
+/*  &::after {
     content: '';
     display: block;
     height: 12px;
@@ -50,14 +50,14 @@
     box-shadow: inset 5px 5px 20px 0 rgb(255 133 0 / 40%);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-  }
+  }*/
 
   img {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
   }
 
   &:hover {
-    bottom: -50px;
+    bottom: 70px;
     -webkit-box-shadow: inset 5px 5px 20px 0 rgb(255 133 0 / 0%), 5px 5px 20px 0 rgb(255 133 0 / 40%);
     box-shadow: inset 5px 5px 20px 0 rgb(255 133 0 / 0%), 5px 5px 20px 0 rgb(255 133 0 / 40%);
     outline-width: 0;
@@ -65,16 +65,16 @@
 }
 @media only screen and (max-width:575px){
     .landing-page{
-        margin-top:0;
+        margin-top:120px;
     }
 }
 @media only screen and (min-width:576px) and (max-width:767px){
   .landing-page {
-    margin-top: 0;
+    margin-top: 120px;
   }
 }
 @media only screen and (min-width:768px) and (max-width:991px) {
   .landing-page {
-    margin-top: 0;
+    margin-top: 120px;
   }
 }

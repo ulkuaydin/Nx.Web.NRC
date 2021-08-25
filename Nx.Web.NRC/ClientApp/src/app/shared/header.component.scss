@@ -24,6 +24,13 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+/*    &__nrc{
+        width:110px;
+        height:20px;
+        font-size:1.375em;
+        color:#ffffff;
+        font-weight:$bolder;
+    }*/
   }
 }
 .navbar-menu{
@@ -89,6 +96,9 @@ header {
   }
 }
 @media only screen and (max-width:575px){
+    header{
+        position:fixed;
+    }
     .navbar-left{
         grid-area:left;
         justify-content:center;
@@ -114,6 +124,7 @@ header {
 
     &__button {
       padding: 0 15px;
+      cursor:pointer;
 
       img {
         vertical-align: middle;
@@ -126,8 +137,6 @@ header {
   .mobile-menu {
     position: fixed;
     top: 120px;
-    left: 5%;
-    right: 5%;
     bottom: 20%;
     background-color: #000000;
     z-index: 999;
@@ -137,9 +146,20 @@ header {
         list-style:none;
         display:flex;
         flex-direction:column;
+        justify-content:center;
+        height:100%;
         &__item{
             padding:10px 0;
-            text-align:left;
+            text-align:center;
+            &__link{
+                font-size:20px;
+                color:$linkcolor;
+                cursor:pointer;
+                transition:0.3s ease-in;
+                &:hover{
+                    color:$naryexcolor;
+                }
+            }
 
         }
     }
@@ -147,6 +167,9 @@ header {
   }
 }
 @media only screen and (min-width:576px) and (max-width:767px){
+    header{
+        position:fixed;
+    }
   .navbar-left {
     grid-area: left;
     justify-content: center;
@@ -154,6 +177,7 @@ header {
 
   .responsive-menu {
     grid-area: menu;
+
   }
 
   .navbar-right {
@@ -176,6 +200,7 @@ header {
     justify-content: center;
     &__button{
         padding:0 15px;
+        cursor:pointer;
         img{
             vertical-align:middle;
         }
@@ -189,8 +214,7 @@ header {
   .mobile-menu {
     position: fixed;
     top: 120px;
-    left: 5%;
-    right: 5%;
+  
     bottom: 20%;
     background-color: #000000;
     z-index: 999;
@@ -201,15 +225,31 @@ header {
       list-style: none;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      height: 100%;
 
       &__item {
         padding: 10px 0;
-        text-align: left;
+        text-align: center;
+
+        &__link {
+          font-size: 20px;
+          color: $linkcolor;
+          cursor: pointer;
+          transition: 0.3s ease-in;
+
+          &:hover {
+            color: $naryexcolor;
+          }
+        }
       }
     }
   }
 }
 @media only screen and (min-width:768px) and (max-width:991px) {
+    header{
+        position:fixed;
+    }
   .navbar-left {
     grid-area: left;
     justify-content: center;
@@ -237,7 +277,7 @@ header {
     align-items: center;
     justify-content: center;
     &__button{
-        
+        cursor:pointer;
         img{
             vertical-align:middle;
         }
@@ -251,8 +291,7 @@ header {
   .mobile-menu {
     position: fixed;
     top: 120px;
-    left: 5%;
-    right: 5%;
+ 
     bottom: 20%;
     background-color: #000000;
     z-index: 999;
@@ -263,10 +302,23 @@ header {
       list-style: none;
       display: flex;
       flex-direction: column;
+      height:100%;
+      justify-content:center;
 
       &__item {
         padding: 10px 0;
-        text-align: left;
+        text-align:center;
+
+        &__link {
+          font-size: 25px;
+          color: $linkcolor;
+          cursor: pointer;
+          transition: 0.3s ease-in;
+
+          &:hover {
+            color: $naryexcolor;
+          }
+        }
       }
     }
   }
