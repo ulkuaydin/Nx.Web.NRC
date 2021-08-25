@@ -68,3 +68,40 @@ footer{
         }
     }
 }
+@media only screen and (min-width:576px) and (max-width:767px){
+  footer {
+    padding: 50px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+
+    &__social {
+      margin: 20px 0 0 0;
+    }
+
+    &__copyright {
+      text-align: center;
+      padding: 20px 0;
+    }
+  }
+
+}
+@media only screen and (min-width:768px) and (max-width:991px){
+  footer {
+    padding: 50px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+
+    &__social {
+      margin: 20px 0 0 0;
+    }
+
+    &__copyright {
+      text-align: center;
+      padding: 20px 0;
+    }
+  }
+}
