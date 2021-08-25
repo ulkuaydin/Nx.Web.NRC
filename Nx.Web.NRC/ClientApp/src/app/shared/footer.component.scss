@@ -1,12 +1,16 @@
 @import '../../__config.scss';
 footer{
     padding:20px 0;
+    background-color:#121212;
 }
 .footer {
-  max-width: 640px;
+ /* max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  text-align: center;*/
+ display:flex;
+ flex-direction:row;
+ justify-content:space-between;
 
   &__logo {
     display: flex;
@@ -22,7 +26,8 @@ footer{
   }
 
   &__social {
-
+      margin-top:auto;
+      margin-bottom:auto;
     &__list {
       list-style: none;
       display: flex;
@@ -31,6 +36,11 @@ footer{
 
       &__item {
         padding: 0 10px;
+        &__link{
+            img{
+                vertical-align:middle;
+            }
+        }
       }
     }
   }
@@ -38,8 +48,23 @@ footer{
   &__copyright {
     font-size: 16px;
     font-weight: $normal;
-    color:$titlecolor;
+    color:$linkcolor;
    
     padding: 50px 0;
   }
+}
+@media only screen and (max-width:575px){
+    footer{
+        padding:50px 0;
+    }
+    .footer{
+        flex-direction:column;
+        &__social{
+            margin:20px 0 0 0;
+        }
+        &__copyright{
+            text-align:center;
+            padding:20px 0;
+        }
+    }
 }

@@ -4,6 +4,7 @@
 .buy {
   padding: 200px 0;
 
+
   &__dots {
     text-align: left;
   }
@@ -16,6 +17,16 @@
       color: $titlecolor;
       margin: 20px 0;
       line-height: 1.3;
+      position:relative;
+      &::after{
+          position:absolute;
+          left:0;
+          bottom:0;
+          width:100px;
+          height:4px;
+          background-color:$naryexcolor;
+          content:'';
+      }
 
       strong {
         font-weight: $bold;
@@ -31,17 +42,17 @@
     }
 
     &__p {
-      color: $linkcolor;
+      color: $pcolor;
       font-size: 1.375rem;
       line-height: 1.6;
-      font-weight: $regular;
+      font-weight: $normal;
     }
 
     &__small {
-      color: $linkcolor;
+      color: $pcolor;
       font-size: 16px;
       line-height: 1.6;
-      font-weight: $thin;
+      font-weight: $regular;
       margin: 50px 0;
     }
 
@@ -403,11 +414,14 @@
 
     &__body {
       &__h2 {
-        font-size: 1.3em;
+        font-size: 2.5em;
         text-align: center;
+      &::after{
+          left:40%;
+      }
 
         strong {
-          font-size: 1.4em;
+          font-size: 2.6em;
         }
       }
       &__p{
@@ -484,11 +498,15 @@
 
     &__body {
       &__h2 {
-        font-size: 1.5em;
+        font-size: 2.5em;
         text-align: center;
+        line-height:1.6;
+        &::after{
+            left:40%;
+        }
 
         strong {
-          font-size: 1.6em;
+         
         }
       }
 
