@@ -11,6 +11,7 @@ import { InfoComponent } from './views/landing-page/info.component';
 import { DashboardComponent } from './views/landing-page/dashboard.component';
 import { FooterComponent } from './shared/footer.component';
 import { BuyComponent } from './views/landing-page/buy.component';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BuyComponent } from './views/landing-page/buy.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ClickOutsideModule
   ],
   providers: [],
   bootstrap: [AppComponent]

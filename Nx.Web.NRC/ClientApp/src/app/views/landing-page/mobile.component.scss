@@ -24,7 +24,7 @@
     line-height: 1;
 
     strong {
-      font-weight: $bold;
+      font-weight: $normal;
       color: $titlecolor;
       margin: 20px 0;
       line-height: 1;
@@ -57,7 +57,7 @@
     }
 
     strong {
-      font-weight: $bold;
+      font-weight: $normal;
       color: $titlecolor;
       margin: 20px 0;
       line-height: 1;
@@ -155,7 +155,7 @@
       text-align: center;
 
       &::after {
-        left: 40%;
+       display:none;
       }
 
       strong {
@@ -307,6 +307,9 @@
     }
     &__h22{
         text-align:center;
+        &::after{
+            left:43%;
+        }
     }
   }
 

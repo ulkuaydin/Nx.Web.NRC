@@ -6,13 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isOpen: boolean = false;
+  isOpen: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
+ 
+  }
+  onClickedOutside(e: Event) {
+    this.isOpen = true;
   }
   openMenu(): void {
+  
     this.isOpen = !this.isOpen;
+
+    
   }
 
 }

@@ -39,7 +39,10 @@
           </ul>
         </div>
         <div class="responsive-menu" (click)="openMenu()">
+
           <span class="responsive-menu__button"><img src="../../assets/responsive-menu.svg" alt="menu" /></span>
+
+
         </div>
         <!--<div class="navbar-right">
           <div class="navbar-right__language">
@@ -48,13 +51,14 @@
           </div>
         </div>-->
       </div>
-  
+
     </div>
- 
-    
+
+
   </div>
 </header>
-<div class="mobile-menu" *ngIf="isOpen">
+
+<div class="mobile-menu" *ngIf="!isOpen">
   <ul class="mobile-menu__list">
     <li class="mobile-menu__list__item">
       <a class="mobile-menu__list__item__link">Home</a>

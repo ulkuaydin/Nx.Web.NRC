@@ -29,7 +29,7 @@
       }
 
       strong {
-        font-weight: $bold;
+        font-weight: $normal;
         font-size: 70px;
         color: $titlecolor;
         letter-spacing: -1px;
@@ -417,7 +417,7 @@
         font-size: 2.5em;
         text-align: center;
       &::after{
-          left:40%;
+          display:none;
       }
 
         strong {
@@ -587,9 +587,10 @@
       &__h2 {
         text-align: center;
         font-size:2.5em;
+        line-height:1.6;
 
         &::after {
-          left: 40%;
+          left: 43%;
         }
 
         strong {
@@ -680,6 +681,12 @@
     &__body {
       &__h2 {
         text-align: center;
+
+        
+          &::after {
+            left: 45%;
+          }
+        
 
         strong {
         }
