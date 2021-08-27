@@ -67,15 +67,25 @@ header {
     border: 2px solid $linkcolor;
     border-radius: 2rem;
     padding: 14px 50px 14px 30px;
+    background-color: #121212;
+    color: $linkcolor;
     display: flex;
     position: relative;
+    color: #E0E0E0;
+    line-height: 1;
+    font-size: 20px;
+    font-weight: $bold;
+    font-family: 'Rajdhani',sans-serif;
 
     &__options {
       margin: 0;
       color: $linkcolor;
       line-height: 1;
+      color:#E0E0E0;
+     
       font-size: 20px;
-      font-weight: 500;
+      font-weight: $bold;
+      font-family: 'Rajdhani',sans-serif;
     }
 
     &__arrow {
@@ -114,9 +124,9 @@ header {
         grid-area:right;
     }
   .navbar {
-    display: flex;
-  
-   justify-content:space-between;
+    display: grid;
+    grid-template-areas:'left left''menu right';
+   justify-content:normal;
   }
     .navbar-menu{
         display:none;
@@ -140,9 +150,9 @@ header {
     }
   .mobile-menu {
     position: fixed;
-    top: 120px;
+    top: 180px;
     bottom: 20%;
-    background-color: #000000;
+    background-color: #121212;
     z-index: 999;
     width:100%;
     height:auto;
@@ -220,7 +230,7 @@ header {
     top: 120px;
   
     bottom: 20%;
-    background-color: #000000;
+    background-color: #121212;
     z-index: 999;
     width: 100%;
     height: auto;

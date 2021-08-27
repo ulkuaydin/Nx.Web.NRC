@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -8,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    translate.addLangs(['Türkçe', 'English']);
+    translate.setDefaultLang('Türkçe');
+
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/Türkçe|English/) ? browserLang : 'Türkçe');
+  }
 
   ngOnInit(): void {
     const sliders = document.querySelectorAll('.slide-in');

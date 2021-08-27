@@ -44,12 +44,12 @@
 
 
         </div>
-        <!--<div class="navbar-right">
-          <div class="navbar-right__language">
-            <p class="navbar-right__language__options">Türkçe</p>
-            <span class="navbar-right__language__arrow"></span>
-          </div>
-        </div>-->
+        <div class="navbar-right">
+          <select class="navbar-right__language" #langSelect (change)="translate.use(langSelect.value)">
+            <option class="navbar-right__language__options" *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{lang}} </option>
+           
+          </select>
+        </div>
       </div>
 
     </div>
