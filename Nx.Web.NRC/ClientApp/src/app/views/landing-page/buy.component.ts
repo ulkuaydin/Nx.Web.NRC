@@ -11,35 +11,36 @@ export class BuyComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    //var countDownDate = new Date("Sep 21, 2022 17:22:33").getTime();
-
-    //var x = setInterval(function () {
-    //  var now = new Date().getTime();
-    //  var distance = countDownDate - now;
-    //  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    //  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    //  var daysDocument = document.querySelector(".buy__form__body__countdown__days__h4") as HTMLElement;
-    //  daysDocument.innerHTML = days + "";
-    //  var hoursDocument = document.querySelector(".buy__form__body__countdown__hours__h4") as HTMLElement;
-    //  hoursDocument.innerHTML = hours + "";
-    //  var minutesDocument = document.querySelector(".buy__form__body__countdown__minutes__h4") as HTMLElement;
-    //  minutesDocument.innerHTML = minutes + "";
-    //  var secondsDocument = document.querySelector(".buy__form__body__countdown__seconds__h4") as HTMLElement;
-    //  secondsDocument.innerHTML = seconds + "";
-
-    //  if (distance < 0) {
-    //    clearInterval(x);
-    //    daysDocument.innerHTML = "EXPIRED";
-    //    hoursDocument.innerHTML = "EXPIRED";
-    //    minutesDocument.innerHTML = "EXPIRED";
-    //    secondsDocument.innerHTML = "EXPIRED";
-
-
-    //  }
-    //},1000)
-
+    const sliders = document.querySelectorAll('.slide-in');
+    const sliders2 = document.querySelectorAll('.slide-in2');
+    const sliders3 = document.querySelectorAll('.slide-in3');
+    const appearOptions = {
+      threshold: 0,
+    }
+    const appearOnScroll1 = new IntersectionObserver(function (
+      entries,
+      appearOnScroll1
+    ) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        else {
+          entry.target.classList.add('appear');
+          appearOnScroll1.unobserve(entry.target);
+        }
+      })
+    },
+      appearOptions);
+    sliders.forEach(slider => {
+      appearOnScroll1.observe(slider);
+    });
+    sliders2.forEach(slider2 => {
+      appearOnScroll1.observe(slider2);
+    });
+    sliders3.forEach(slider3 => {
+      appearOnScroll1.observe(slider3);
+    })
   }
 
 }
